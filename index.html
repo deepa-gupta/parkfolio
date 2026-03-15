@@ -21,7 +21,10 @@
   <nav class="nav" id="nav">
     <div class="nav-inner">
       <a href="#" class="nav-logo">
-        <img src="assets/logo.png" alt="ParkFolio icon" class="nav-icon" />
+        <span class="nav-icon-wrap">
+          <img src="assets/logo.png" alt="" class="nav-icon" id="nav-logo-img" onerror="this.style.display='none'" />
+          <span class="nav-icon-fallback" aria-hidden="true">🌲</span>
+        </span>
         <span>ParkFolio</span>
       </a>
       <a href="#download" class="btn btn-sm">Download</a>
@@ -197,10 +200,28 @@
     </div>
   </section>
 
+  <!-- STAMPS SHOWCASE -->
+  <section class="section stamps-showcase" id="stamps">
+    <div class="container">
+      <h2 class="section-title reveal">Collect Every Stamp</h2>
+      <p class="section-sub reveal">Earn a unique passport stamp for each NPS location you visit. From Acadia to Zion — 75 stamps and counting.</p>
+      <div class="stamps-grid">
+        <div class="stamp-item reveal"><img src="assets/stamps/grca.jpeg" alt="Grand Canyon stamp" /></div>
+        <div class="stamp-item reveal"><img src="assets/stamps/yose.jpeg" alt="Yosemite stamp" /></div>
+        <div class="stamp-item reveal"><img src="assets/stamps/yell.jpeg" alt="Yellowstone stamp" /></div>
+        <div class="stamp-item reveal"><img src="assets/stamps/glac.jpeg" alt="Glacier stamp" /></div>
+        <div class="stamp-item reveal"><img src="assets/stamps/zion.jpeg" alt="Zion stamp" /></div>
+        <div class="stamp-item reveal"><img src="assets/stamps/arch.jpeg" alt="Arches stamp" /></div>
+        <div class="stamp-item reveal"><img src="assets/stamps/romo.jpeg" alt="Rocky Mountain stamp" /></div>
+        <div class="stamp-item reveal"><img src="assets/stamps/acad.jpeg" alt="Acadia stamp" /></div>
+      </div>
+    </div>
+  </section>
+
   <!-- ACHIEVEMENTS -->
   <section class="section achievements-section" id="achievements">
     <div class="container">
-      <h2 class="section-title reveal">Achievement Badges</h2>
+      <h2 class="section-title reveal">Earn Achievement Badges</h2>
       <p class="section-sub reveal">Every milestone has its own badge. How far will you go?</p>
       <div class="badges-grid">
         <div class="badge-card reveal">
@@ -240,7 +261,10 @@
   <!-- FINAL DOWNLOAD CTA -->
   <section class="section cta-section" id="download">
     <div class="cta-inner reveal">
-      <img src="assets/logo.png" alt="ParkFolio" class="cta-logo" id="cta-logo" />
+      <div class="cta-logo-wrap">
+        <img src="assets/logo.png" alt="ParkFolio" class="cta-logo" id="cta-logo" onerror="this.style.display='none';document.getElementById('cta-logo-fallback').style.display='flex'" />
+        <div class="cta-logo-fallback" id="cta-logo-fallback">🌲</div>
+      </div>
       <h2>Start Your Collection</h2>
       <p>Free to download. Every NPS location included. No account required.</p>
       <!-- TODO: Replace href with public TestFlight link (testflight.apple.com/join/XXXX) or App Store URL when available -->
